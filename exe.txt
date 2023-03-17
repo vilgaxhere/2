@@ -1,0 +1,102 @@
+wire - copper straight / serialDte
+switch - 2960
+router - 1941 / 2811
+jisme jisme router hai usme switch to switch nahi connect karne
+
+Practical 1
+Using Packet Tracer, create a basic network of two computers using appropriate
+network wire. Use Static IP address allocation and show connectivity
+
+
+1- Drag two pc's connect with normal wire
+2- GO TO ip config > give unique ipv4 two both pcs (192.168.0.1, 192.168.0.2)
+3 - Go to command prompt and type ping 192.168.0.1 in pc1, same with pc2 but use ip of pc1
+4 - Select a packet and click on simulation
+
+Practical 2 - create basic network of minimum 6 computer using layer tool switch
+
+1- Take 6pcs and 1 switch(2960) connect with copper wire
+2 - Give uinque ip to every pc
+3 - (optional) ping every pc done
+
+Practical 3 - create a triangular network each switch contain 5pcs
+
+1 - Take 3 switches and 15 pcs and connect pc with switch using copper straight wire
+2 - Give ipv4 to  every pc
+
+Practical 4 - using cmd, execute following networking commands and note the outputs , ping traceroute, netstat, arp, ipconfig, hostname, NSLookup, pathpins
+
+(input this in cmd directly)
+ping youtube.com
+tracert youtube.com
+netstat
+arp -a
+ipconfig
+hostname
+nslookup google.com
+pathping 192.168.43.157
+
+
+Practical 5 - create a basic network of one server and two computers using appropriate network wire use dynamic ip address and show connectivity
+
+1 - Take 2 pcs connect to switch and then connect switch to server with normal wire
+2 - go to ip > switch to dhcp ip in both pcs and server
+
+Practical 6 - create a basic network of one server and two computers and two mobile usirg appropriate network wire 
+
+1 - take 2 pc connect to a switch,  connect that switch to a server and with access point and add two smart phones
+2 - go to ip > switch to dhcp ip in both pcs and server and mobile
+
+Practical 7 - create a basic network of multiple topology using appropriate wire show connectivity
+
+Star (pract2)
+1 - 6pcs and 1 switch
+
+Bus
+1 - 4 switch 4 pc connect (Each pc with its own switch) and switch to switch
+2 - Give uinque ip to every pc
+
+Ring
+1 - 4 switch 4 pc connect (Each pc with its own switch) and switch to switch
+2 - Give uinque ip to every pc
+
+Mesh
+1 - 4 switch 4 pc connect (Each pc with its own switch) and every switch to every switch
+2 - Give uinque ip to every pc
+
+Practical 8 - create a network with three routers with RIPv1 of each routr associated network will have minimum three pc 
+
+1 - take 3 switch and connect 3pcs to each switch, connect router to every switch
+2 - connect every pc to its switch and give a ip to pc and default gateway
+3 - switch to router conncet with normal wire, 
+4 - in router add hwic-2t, connect router to router 
+5 - Now goto router > physical > interface (jo port mai switch connnect hai) and put the default gateway , turn it on
+6 - Serial port no daalo, 
+7 - Rip  mai default gateway but last mai 0 and serial port jisse connected hai
+
+Practical 9 - create a network with three routers with RIPv2 of each routr associated network will have minimum three pc 
+
+1 - same as practical 8
+2 - go to cli  > Router(config-router)#version 2
+
+Practical 11 - create a wireless network of multiple pcs using appropriate access point
+1 - Take 5 pcs and 1 access point
+2 - remove the inbuilt module and add PT-Host-NM-1W
+3 - add ipvm (or use dhcp)
+
+Practical 13 - create a network with three routers with ospf and each router associated network will have minimum three pc and show connectivity
+
+1 - mostly like practical 8
+2 - just dont do rip
+3 - open router cli > Router(config-router)#router ospf 1, Router(config-router)#network 192.168.1.0 0.0.0.255 area 1
+Router(config-router)#network 10.0.0.1 0.0.0.255 area 1
+
+Practical 14 - create a network with 3 pcs and each router associated network will have minimum three pc and show connectivity
+
+1 - mostly like practical 8
+2 - just dont do rip
+3 - open router cli > Router(config-router)#router bgp 1000
+network 10.0.0.1
+network 192.168.10
+neighbor 10.0.0.2 as 2000
+(declare sab mai)
